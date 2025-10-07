@@ -1,42 +1,41 @@
 # fetch_to_google_apps_script
 how to use fetch to request post/get in google apps scripts
-var payload={
-  "data":"test",
-  "status:1
-}
-const data = new URLSearchParams(toFormData(payload));
- let response = await fetch(urlappMain,{
-    method: "POST",
-    body:data,
-  })
-  .then(r => r.json())
-  .then(async(res) => {
-    console.log(res)
-    return res
-  })
-  .catch(error => {console.error('Error:', error)});
+>var payload={<br/>
+	"data":"test",<br/>
+  	"status:1<br/>
+}<br/>
+const data = new URLSearchParams(toFormData(payload));<br/>
+let response = await fetch(urlappMain,{<br/>
+	method: "POST",<br/>
+    body:data,<br/>
+})<br/>
+.then(r => r.json())<br/>
+.then(async(res) => {<br/>
+	console.log(res)<br/>
+    return res<br/>
+})<br/>
+.catch(error => {console.error('Error:', error)});<br/>
 
-#how to post Image and data
-var url='https://xxxx.com/dsfsdfs?id=xx&st=0
-var base64=""//image base64
-fetch(url, {
-    method: "POST",
-      maxBodyLength: Infinity,
-      headers: {
-        'Content-Type': 'text/plain'
-      },
-        body: base64,
-      })
-      .then(response => {
-        var data=response.json()
-        console.log('resp response',JSON.stringify(data))
-        return data;
-      })
-      .then(data => {
-        console.log('resp data',JSON.stringify(data))
-        app.preloader.hide()
-        if (data.success){
-          console.log('resp data',JSON.stringify(data))
-        }
-      })
-			.catch(error => {console.error('Error:', error)});
+## how to post Image and data
+>var url='https://xxxx.com/dsfsdfs?id=xx&st=0<br/>
+var base64=""//image base64<br/>
+fetch(url, {<br/>
+    method: "POST",<br/>
+      maxBodyLength: Infinity,<br/>
+      headers: {<br/>
+        'Content-Type': 'text/plain'<br/>
+      },<br/>
+        body: base64,<br/>
+      })<br/>
+      .then(response => {<br/>
+        var data=response.json()<br/>
+        console.log('resp response',JSON.stringify(data))<br/>
+        return data;<br/>
+      })<br/>
+      .then(data => {<br/>
+        console.log('resp data',JSON.stringify(data))<br/>
+        if (data.success){<br/>
+          console.log('resp data',JSON.stringify(data))<br/>
+        }<br/>
+      })<br/>
+	.catch(error => {console.error('Error:', error)});<br/>
