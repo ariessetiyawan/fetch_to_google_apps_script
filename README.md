@@ -1,3 +1,4 @@
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/ab2db13c-fad3-449d-98ed-d8b2b7e64dad" />
 # fetch_to_google_apps_script
 how to use fetch to request post/get in google apps scripts
 >var payload={<br/>
